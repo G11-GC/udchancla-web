@@ -1,0 +1,215 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  relationMode = "prisma"
+
+}
+
+model equipos {
+  id            Int             @id @default(autoincrement())
+  nombre        String
+  escudo        String?
+  equipos_stats equipos_stats[]
+  partidosA     partidos[]      @relation("partidosA")
+  partidosB     partidos[]      @relation("partidosB")
+
+  ligas ligas[]
+}
+
+model equipos_stats {
+  id              Int     @id @default(autoincrement())
+  partidosJugados Int     @default(0)
+  victorias       Int     @default(0)
+  empates         Int     @default(0)
+  derrotas        Int     @default(0)
+  puntos          Int     @default(0)
+  golesAFavor     Int     @default(0)
+  golesEnContra   Int     @default(0)
+  diferenciaGoles Int     @default(0)
+  descalificado   Boolean @default(false)
+
+  equipoId Int
+  equipo   equipos @relation(fields: [equipoId], references: [id])
+
+  ligaId Int   @default(1)
+  ligas  ligas @relation(fields: [ligaId], references: [id])
+  @@unique([equipoId, ligaId])
+}
+
+// tabla para almacenar los goles y las asistencias de los partidos
+model goles {
+  id          Int     @id @default(autoincrement())
+  goleadorId  Int?
+  partidoId   Int
+  asistenteId Int?
+  parte       Parte   @default(PRIMERA)
+  orden       Int
+  entidad     Entidad
+
+  partidosStats partidos_stats[] @relation("partidoStatsToGoles")
+}
+
+//tabla para almacenar los datos base de los jugadores
+model jugadores {
+  id         Int     @id @default(autoincrement())
+  dorsal     Int?
+  nombre     String
+  invitado   Boolean @default(false)
+  apercibido Boolean @default(false)
+  activo     Boolean @default(true)
+
+  jugadores_partidos jugadores_partidos[]
+  sanciones          sanciones[]
+  jugadores_stats    jugadores_stats?     @relation(fields: [jugadores_statsId], references: [id])
+  jugadores_statsId  Int?
+
+}
+
+//tabla para almacenar las estadisticas de los jugadores por fase y temporada 
+model jugadores_stats {
+  id                 Int @id @default(autoincrement())
+  jugadorId          Int
+  apariciones        Int @default(0)
+  goles              Int @default(0)
+  asistencias        Int @default(0)
+  porteriasACero     Int @default(0)
+  tarjetasAmarillas  Int @default(0)
+  tarjetasRojas      Int @default(0)
+  partidosSancionado Int @default(0)
+
+  jugadores jugadores[]
+
+  ligaId Int
+  liga   ligas @relation(fields: [ligaId], references: [id])
+
+  @@unique([jugadorId, ligaId])
+}
+
+//tabla que regula las presencias y las tarjetas de los jugadores en los partidos
+model jugadores_partidos {
+  id                Int       @id @default(autoincrement())
+  jugadorId         Int
+  partidoId         Int
+  tarjetasAmarillas Int       @default(0)
+  tarjetasRojas     Int       @default(0)
+  partidos          partidos  @relation(fields: [partidoId], references: [id])
+  jugadores         jugadores @relation(fields: [jugadorId], references: [id])
+  @@unique([jugadorId, partidoId])
+}
+
+model ligas {
+  id              Int               @id @default(autoincrement())
+  temporada       Temporada         @default(TEMPORADA_2025_2026)
+  fase            Fase              
+  equipos         equipos[]
+  partidos        partidos[]
+  jugadores_stats jugadores_stats[]
+  equipos_stats   equipos_stats[]
+
+  @@unique([temporada, fase])
+}
+
+// tabla para almacenar las estadísticas de los partidos
+model partidos {
+  id            Int      @id @default(autoincrement())
+  jornada       Int?
+  fecha         DateTime
+  instalaciones String
+  campo         Int
+
+  partidos_stats     partidos_stats[]
+  jugadores_partidos jugadores_partidos[]
+
+  ligaId            Int     @default(1)
+  liga              ligas   @relation(fields: [ligaId], references: [id])
+  equipoAId         Int
+  equipoBId         Int
+  equipos_partidosA equipos @relation("partidosA", fields: [equipoAId], references: [id])
+  equipos_partidosB equipos @relation("partidosB", fields: [equipoBId], references: [id])
+
+  @@unique([equipoAId, equipoBId, ligaId])
+}
+
+model partidos_stats {
+  id             Int        @id @default(autoincrement())
+  partidoId      Int        @unique
+  golesA         Int        @default(0)
+  golesB         Int        @default(0)
+  amarillasA     Int        @default(0)
+  amarillasB     Int        @default(0)
+  rojasA         Int        @default(0)
+  rojasB         Int        @default(0)
+  no_presentadoA Boolean    @default(false)
+  no_presentadoB Boolean    @default(false)
+  resultado      Resultado?
+
+  partido partidos @relation(fields: [partidoId], references: [id])
+  goles   goles[]  @relation("partidoStatsToGoles")
+}
+
+model sanciones {
+  id            Int       @id @default(autoincrement())
+  jugadorId     Int
+  jornadaInicio Int
+  jornadaFin    Int
+  jugadores     jugadores @relation(fields: [jugadorId], references: [id])
+}
+
+enum Fase {
+  PRIMERA
+  SEGUNDA
+  VERANO
+  OTRO
+  AMISTOSO
+}
+
+enum Instalaciones {
+  CIUTAT_ESPORTIVA_E
+  CIUTAT_ESPORTIVA_D
+  CHENCHO_B
+}
+
+enum Entidad {
+  RIVAL
+  CHANCLA
+}
+
+enum Temporada {
+  TEMPORADA_2025_2026
+  TEMPORADA_2026_2027
+  TEMPORADA_2027_2028
+  TEMPORADA_2028_2029
+  TEMPORADA_2029_2030
+  TEMPORADA_2030_2031
+  TEMPORADA_2031_2032
+  TEMPORADA_2032_2033
+  TEMPORADA_2033_2034
+  TEMPORADA_2034_2035
+  TEMPORADA_2035_2036
+  TEMPORADA_2036_2037
+  TEMPORADA_2037_2038
+  TEMPORADA_2038_2039
+  TEMPORADA_2039_2040
+  TEMPORADA_2040_2041
+}
+
+enum Parte {
+  PRIMERA
+  SEGUNDA
+  PRIMERA_PRORROGA
+  SEGUNDA_PRORROGA
+  PENALTIS
+}
+
+enum Resultado {
+  A
+  B
+  EMPATE
+  A_NO_PRESENTADO
+  B_NO_PRESENTADO
+  EMPATE_NO_PRESENTADO
+  SUSPENDIDO
+}

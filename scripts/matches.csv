@@ -1,0 +1,67 @@
+Jornada,fechaUTC,Hora,Equipo A,equipoAId,Equipo B,equipoBId,instalaciones,campo
+1,5/11/2025,20:30:00,Vikingos Futbol Club,11,Cultural Recompensa,3,CIUTAT_ESPORTIVA_E,1
+1,5/11/2025,20:30:00,Dyermatic CF,4,FC Trans Emmar,5,CIUTAT_ESPORTIVA_E,2
+1,6/11/2025,20:30:00,Vodka Juniors,12,Maradona FC,7,CHENCHO_B,2
+1,7/11/2025,20:30:00,Al-Hachis FC,2,Inafuma y Beben,6,CIUTAT_ESPORTIVA_E,1
+1,7/11/2025,20:30:00,Tuerzebotas FC,10,UD Chancla,1,CIUTAT_ESPORTIVA_D,2
+1,7/11/2025,20:30:00,Ozempic de Lyon FC,8,Sense Remei FC,9,CIUTAT_ESPORTIVA_E,2
+2,12/11/2025,20:30:00,Maradona FC,7,Al-Hachis FC,2,CIUTAT_ESPORTIVA_E,1
+2,12/11/2025,20:30:00,Inafuma y Beben,6,Ozempic de Lyon FC,8,CIUTAT_ESPORTIVA_E,2
+2,13/11/2025,20:30:00,FC Trans Emmar,5,UD Chancla,1,CHENCHO_B,2
+2,14/11/2025,20:30:00,Dyermatic CF,4,Vodka Juniors,12,CIUTAT_ESPORTIVA_E,1
+2,14/11/2025,20:30:00,Sense Remei FC,9,Vikingos Futbol Club,11,CIUTAT_ESPORTIVA_D,2
+2,14/11/2025,20:30:00,Cultural Recompensa,3,Tuerzebotas FC,10,CIUTAT_ESPORTIVA_E,2
+3,19/11/2025,20:30:00,Ozempic de Lyon FC,8,Maradona FC,7,CIUTAT_ESPORTIVA_E,1
+3,19/11/2025,20:30:00,Vodka Juniors,12,FC Trans Emmar,5,CIUTAT_ESPORTIVA_E,2
+3,20/11/2025,20:30:00,Vikingos Futbol Club,11,Inafuma y Beben,6,CHENCHO_B,2
+3,21/11/2025,20:30:00,Tuerzebotas FC,10,Sense Remei FC,9,CIUTAT_ESPORTIVA_E,1
+3,21/11/2025,20:30:00,UD Chancla,1,Cultural Recompensa,3,CIUTAT_ESPORTIVA_D,2
+3,21/11/2025,20:30:00,Al-Hachis FC,2,Dyermatic CF,4,CIUTAT_ESPORTIVA_E,2
+4,26/11/2025,20:30:00,Dyermatic CF,4,Ozempic de Lyon FC,8,CIUTAT_ESPORTIVA_E,1
+4,26/11/2025,20:30:00,Maradona FC,7,Vikingos Futbol Club,11,CIUTAT_ESPORTIVA_E,2
+4,27/11/2025,20:30:00,FC Trans Emmar,5,Cultural Recompensa,3,CHENCHO_B,2
+4,28/11/2025,20:30:00,Inafuma y Beben,6,Tuerzebotas FC,10,CIUTAT_ESPORTIVA_E,1
+4,28/11/2025,20:30:00,Vodka Juniors,12,Al-Hachis FC,2,CIUTAT_ESPORTIVA_D,2
+4,28/11/2025,20:30:00,Sense Remei FC,9,UD Chancla,1,CIUTAT_ESPORTIVA_E,2
+5,3/12/2025,20:30:00,Ozempic de Lyon FC,8,Vodka Juniors,12,CIUTAT_ESPORTIVA_E,1
+5,3/12/2025,20:30:00,Vikingos Futbol Club,11,Dyermatic CF,4,CIUTAT_ESPORTIVA_E,2
+5,4/12/2025,20:30:00,UD Chancla,1,Inafuma y Beben,6,CHENCHO_B,2
+5,5/12/2025,20:30:00,Cultural Recompensa,3,Sense Remei FC,9,CIUTAT_ESPORTIVA_E,1
+5,5/12/2025,20:30:00,Tuerzebotas FC,10,Maradona FC,7,CIUTAT_ESPORTIVA_D,2
+5,5/12/2025,20:30:00,Al-Hachis FC,2,FC Trans Emmar,5,CIUTAT_ESPORTIVA_E,2
+6,17/12/2025,20:30:00,Vodka Juniors,12,Vikingos Futbol Club,11,CIUTAT_ESPORTIVA_E,1
+6,17/12/2025,20:30:00,Maradona FC,7,UD Chancla,1,CIUTAT_ESPORTIVA_E,2
+6,18/12/2025,20:30:00,Inafuma y Beben,6,Cultural Recompensa,3,CHENCHO_B,2
+6,19/12/2025,20:30:00,Dyermatic CF,4,Tuerzebotas FC,10,CIUTAT_ESPORTIVA_E,1
+6,19/12/2025,20:30:00,FC Trans Emmar,5,Sense Remei FC,9,CIUTAT_ESPORTIVA_D,2
+6,19/12/2025,20:30:00,Al-Hachis FC,2,Ozempic de Lyon FC,8,CIUTAT_ESPORTIVA_E,2
+7,14/01/2026,20:30:00,UD Chancla,1,Dyermatic CF,4,CIUTAT_ESPORTIVA_E,1
+7,14/01/2026,20:30:00,Ozempic de Lyon FC,8,FC Trans Emmar,5,CIUTAT_ESPORTIVA_E,2
+7,15/01/2026,20:30:00,Cultural Recompensa,3,Maradona FC,7,CHENCHO_B,2
+7,16/01/2026,20:30:00,Vikingos Futbol Club,11,Al-Hachis FC,2,CIUTAT_ESPORTIVA_E,1
+7,16/01/2026,20:30:00,Tuerzebotas FC,10,Vodka Juniors,12,CIUTAT_ESPORTIVA_D,2
+7,16/01/2026,20:30:00,Sense Remei FC,9,Inafuma y Beben,6,CIUTAT_ESPORTIVA_E,2
+8,21/01/2026,20:30:00,Dyermatic CF,4,Cultural Recompensa,3,CIUTAT_ESPORTIVA_E,1
+8,21/01/2026,20:30:00,Ozempic de Lyon FC,8,Vikingos Futbol Club,11,CIUTAT_ESPORTIVA_E,2
+8,22/01/2026,20:30:00,Vodka Juniors,12,UD Chancla,1,CHENCHO_B,2
+8,23/01/2026,20:30:00,Al-Hachis FC,2,Tuerzebotas FC,10,CIUTAT_ESPORTIVA_E,1
+8,23/01/2026,20:30:00,FC Trans Emmar,5,Inafuma y Beben,6,CIUTAT_ESPORTIVA_D,2
+8,23/01/2026,20:30:00,Maradona FC,7,Sense Remei FC,9,CIUTAT_ESPORTIVA_E,2
+9,28/01/2026,20:30:00,Inafuma y Beben,6,Maradona FC,7,CIUTAT_ESPORTIVA_E,1
+9,28/01/2026,20:30:00,Vikingos Futbol Club,11,FC Trans Emmar,5,CIUTAT_ESPORTIVA_E,2
+9,29/01/2026,20:30:00,Cultural Recompensa,3,Vodka Juniors,12,CHENCHO_B,2
+9,30/01/2026,20:30:00,Sense Remei FC,9,Dyermatic CF,4,CIUTAT_ESPORTIVA_E,1
+9,30/01/2026,20:30:00,UD Chancla,1,Al-Hachis FC,2,CIUTAT_ESPORTIVA_D,2
+9,30/01/2026,20:30:00,Tuerzebotas FC,10,Ozempic de Lyon FC,8,CIUTAT_ESPORTIVA_E,2
+10,4/02/2026,20:30:00,Al-Hachis FC,2,Cultural Recompensa,3,CIUTAT_ESPORTIVA_E,1
+10,4/02/2026,20:30:00,Ozempic de Lyon FC,8,UD Chancla,1,CIUTAT_ESPORTIVA_E,2
+10,5/02/2026,20:30:00,Dyermatic CF,4,Inafuma y Beben,6,CHENCHO_B,2
+10,6/02/2026,20:30:00,Vikingos Futbol Club,11,Tuerzebotas FC,10,CIUTAT_ESPORTIVA_E,1
+10,6/02/2026,20:30:00,Vodka Juniors,12,Sense Remei FC,9,CIUTAT_ESPORTIVA_D,2
+10,6/02/2026,20:30:00,FC Trans Emmar,5,Maradona FC,7,CIUTAT_ESPORTIVA_E,2
+11,11/02/2026,20:30:00,Cultural Recompensa,3,Ozempic de Lyon FC,8,CIUTAT_ESPORTIVA_E,1
+11,11/02/2026,20:30:00,Maradona FC,7,Dyermatic CF,4,CIUTAT_ESPORTIVA_E,2
+11,12/02/2026,20:30:00,Inafuma y Beben,6,Vodka Juniors,12,CHENCHO_B,2
+11,13/02/2026,20:30:00,Tuerzebotas FC,10,FC Trans Emmar,5,CIUTAT_ESPORTIVA_E,1
+11,13/02/2026,20:30:00,UD Chancla,1,Vikingos Futbol Club,11,CIUTAT_ESPORTIVA_D,2
+11,13/02/2026,20:30:00,Sense Remei FC,9,Al-Hachis FC,2,CIUTAT_ESPORTIVA_E,2
