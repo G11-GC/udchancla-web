@@ -19,8 +19,6 @@ export const bitcount = localFont({
   display: 'swap',
 })
 
-export const runtime = 'edge';
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
