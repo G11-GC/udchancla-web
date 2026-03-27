@@ -3,7 +3,7 @@ import { prisma } from "@/lib/prisma-singleton";
 import Image from "next/image";
 
 export async function MatchListWrapper() {
-    const partidos = await prisma.partido.findMany({
+    const partidos = await prisma.partidos.findMany({
          select: {
             jornada: true,
             fecha: true,
