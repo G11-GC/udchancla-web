@@ -42,3 +42,5 @@ next-env.d.ts
 
 /_gestion/
 /app/test/
+/seed_history/
+seed_history/
