@@ -44,3 +44,4 @@ next-env.d.ts
 /app/test/
 /seed_history/
 seed_history/
+/prisma/futbol.db
